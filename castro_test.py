@@ -1,5 +1,7 @@
 import statistics
 import sys
+import random
+
 print("""
 
 **Guess **That **number**
@@ -9,7 +11,7 @@ guess a number between 1 and 100
 playAmount = 0
 nom_of_tries = 0
 number = int(100)
-guess_nuber = int(40)
+guess_nuber = int(random.randrange(1, 100))
 
 
 game_data = []
@@ -43,6 +45,12 @@ while True:
             
 
         elif guess != guess_nuber:
+            # tell user whether to go highrt or lower 
+            if guess_nuber >  guess:
+                print("Aim higher")
+            elif guess_nuber < guess:
+                print("Aim Lower")
+
             game_data.append(guess)
             nom_of_tries += 1
             print('Try again')
@@ -65,6 +73,7 @@ while True:
             playyy = str(input(" 'y' to keep playing 'x' to exit >>"))
 
             if playyy == "x":
+                print('number of tries {}'.format(nom_of_tries) )
                 sys.exit()
             elif playyy == "y":
                 playAmount += 1
