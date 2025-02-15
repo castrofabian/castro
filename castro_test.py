@@ -14,6 +14,7 @@ number = int(100)
 guess_nuber = int(random.randrange(1, 100))
 
 
+
 game_data = []
 
 
@@ -26,11 +27,15 @@ def solu_tion(high_score):
         print ('Your mean is {}'.format(me_an2))
         print ('Your median is {}'.format(me_dian2))
         print(" Good job ")
+
+    else:
+        print("play some more")
     
 
     
 while True:
     try:
+        
         guess = int(input("enter your guess: "))
         
     except ValueError:
@@ -47,12 +52,16 @@ while True:
         elif guess != guess_nuber:
             # tell user whether to go highrt or lower 
             if guess_nuber >  guess:
+                print("<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>")
                 print("Aim higher")
+                print("<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>")
             elif guess_nuber < guess:
+                print("/n <<<<<<<<<<<<<<<>>>>>>>>>>>>>>>")
                 print("Aim Lower")
+                print("/n <<<<<<<<<<<<<<<>>>>>>>>>>>>>>>")
 
             game_data.append(guess)
-            nom_of_tries += 1
+            nom_of_tries =  nom_of_tries + 1
             print('Try again')
 
         elif guess == guess_nuber:
@@ -73,10 +82,14 @@ while True:
             playyy = str(input(" 'y' to keep playing 'x' to exit >>"))
 
             if playyy == "x":
+                print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
                 print('number of tries {}'.format(nom_of_tries) )
+                print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
+                solu_tion(game_data)
                 sys.exit()
             elif playyy == "y":
                 playAmount += 1
+                guess_nuber = int(random.randrange(1, 100))
                 continue
                 
             
