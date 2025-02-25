@@ -19,17 +19,18 @@ game_data = []
 
 
 def solu_tion(high_score):
-    if playAmount > 3:
+    me_dian2 = statistics.median(high_score)
+    me_an2 = statistics.mean(high_score)
         
-        me_dian2 = statistics.median(high_score)
-        me_an2 = statistics.mean(high_score)
-        
-        print ('Your mean is {}'.format(me_an2))
-        print ('Your median is {}'.format(me_dian2))
-        print(" Good job ")
+    print ('Your mean is {}'.format(me_an2))
+    print("....................................")
+    print("....................................")
+    print ('Your median is {}'.format(me_dian2))
+    print("....................................")
+    print("....................................")
+    print(" Good job ")
 
-    else:
-        print("play some more")
+    
     
 
     
@@ -85,11 +86,20 @@ while True:
                 print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
                 print('number of tries {}'.format(nom_of_tries) )
                 print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
+                print("number of tries {}".format(nom_of_tries))
+                print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
                 solu_tion(game_data)
                 sys.exit()
+
             elif playyy == "y":
                 playAmount += 1
+                if playAmount > 1:
+                    solu_tion(game_data)
+                else :
+                    print("play some more")
+            
                 guess_nuber = int(random.randrange(1, 100))
+
                 continue
                 
             
