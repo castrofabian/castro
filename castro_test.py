@@ -74,7 +74,7 @@ while True:
             nom_of_tries =  nom_of_tries + 1
             print ('number of tries {}'.format(nom_of_tries))
             new_cop = game_data.copy()
-            game_data.append(guess)
+            game_data.append(nom_of_tries)
 
             
             #get mean median and mode of high score
@@ -91,6 +91,7 @@ while True:
 
                 #print game data
                 print('game data : {}'.format(game_data))
+                print("/n <<<<<<<<<<<<<<<>>>>>>>>>>>>>>>")
                 solu_tion(game_data)
                 sys.exit()
 
