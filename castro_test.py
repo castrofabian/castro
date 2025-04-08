@@ -24,7 +24,7 @@ game_data2 = game_data.copy()
 
 def solu_tion(high_score):
 
-    me_dian2 = statistics.median(high_score)
+    me_dian2 = statistics.median(high_score )
     me_an2 = statistics.mean(high_score)
         
     print ('Your mean is {}'.format(me_an2))
@@ -71,6 +71,7 @@ while True:
             print('Try again')
 
         elif guess == guess_nuber:
+            nom_of_tries =  nom_of_tries + 1
             print ('number of tries {}'.format(nom_of_tries))
             new_cop = game_data.copy()
             game_data.append(guess)
@@ -79,7 +80,7 @@ while True:
             #get mean median and mode of high score
             
 
-            playyy = str(input(" 'y' to keep playing 'x' to exit >>"))
+            playyy = str(input(" 'y' to keep playing 'x' to exit >>")).lower()
 
             if playyy == "x":
                 print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
@@ -87,17 +88,19 @@ while True:
                 print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
                 print("number of tries {}".format(nom_of_tries))
                 print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
+
+                #print game data
                 print('game data : {}'.format(game_data))
-                solu_tion(game_data2)
+                solu_tion(game_data)
                 sys.exit()
 
             elif playyy == "y":
                 print(" ..........................")
-                print("no of tries {}".format(nom_of_tries))
+                print("nom of Atempts {}".format(nom_of_tries))
                 nom_of_tries = 0
+            
                 print(" ..........................")
                 playAmount += 1
-            
                 guess_nuber = int(random.randrange(1, 100))
 
                 continue
