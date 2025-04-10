@@ -66,7 +66,7 @@ while True:
                 print("Aim Lower")
                 print("/n <<<<<<<<<<<<<<<>>>>>>>>>>>>>>>")
 
-            game_data.append(guess)
+            #game_data.append(guess)
             nom_of_tries =  nom_of_tries + 1
             print('Try again')
 
