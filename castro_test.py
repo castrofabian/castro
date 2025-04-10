@@ -26,11 +26,15 @@ def solu_tion(high_score):
 
     me_dian2 = statistics.median(high_score )
     me_an2 = statistics.mean(high_score)
+    modee = statistics.mode(high_score)
         
     print ('Your mean is {}'.format(me_an2))
     print("....................................")
     print("....................................")
     print ('Your median is {}'.format(me_dian2))
+    print("....................................")
+    print("....................................")
+    print ('Your mode is {}'.format(modee))
     print("....................................")
     print("....................................")
     print(" Good job ")
