@@ -88,8 +88,6 @@ while True:
 
             if playyy == "x":
                 print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
-                print('number of tries {}'.format(nom_of_tries) )
-                print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
                 print("number of tries {}".format(nom_of_tries))
                 print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>")
 
